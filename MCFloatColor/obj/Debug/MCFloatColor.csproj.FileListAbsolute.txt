@@ -1,0 +1,30 @@
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.exe.config
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.exe
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.pdb
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csprojAssemblyReference.cache
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MainWindow.g.cs
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\App.g.cs
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor_MarkupCompile.cache
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor_MarkupCompile.lref
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MainWindow.baml
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.g.resources
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.Properties.Resources.resources
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csproj.GenerateResource.cache
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csproj.CoreCompileInputs.cache
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.exe
+C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.pdb
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csprojAssemblyReference.cache
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MainWindow.g.cs
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\App.g.cs
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor_MarkupCompile.cache
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor_MarkupCompile.lref
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.exe
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.pdb
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.exe.config
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.exe
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\bin\Debug\MCFloatColor.pdb
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MainWindow.baml
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.g.resources
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.Properties.Resources.resources
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csproj.GenerateResource.cache
+C:\Users\gaoxi\OneDrive\build\Visual Studio\MCFloatColor\MCFloatColor\obj\Debug\MCFloatColor.csproj.CoreCompileInputs.cache

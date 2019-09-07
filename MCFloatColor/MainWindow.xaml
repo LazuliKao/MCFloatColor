@@ -1,0 +1,29 @@
+﻿<Window x:Class="MCFloatColor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MCFloatColor"
+        mc:Ignorable="d"
+        Title="RGB to Float(by gxh)" Height="261.553" Width="335.516" Loaded="Window_Loaded">
+    <Grid x:Name="background" Margin="0,0,3.333,5.333">
+        <Button x:Name="ColorChoose" Content="点击选择颜色" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Click="ColorChoose_Click" FontFamily="Microsoft YaHei" FontSize="24" Foreground="Black" Cursor="Hand"/>
+        <TextBox x:Name="ColorBox1" HorizontalAlignment="Left" Height="37" Margin="113,94,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="141" FontSize="20" RenderTransformOrigin="1.867,0.613"/>
+        <Label Content="(R,G,B,A)=" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="ColorBox2" HorizontalAlignment="Left" Height="37" Margin="113,138,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="141" FontSize="20" RenderTransformOrigin="1.867,0.613"/>
+        <Label Content="(R,G,B)=" HorizontalAlignment="Left" Margin="20,138,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="copy1" Content="复制" HorizontalAlignment="Left" Height="37" Margin="259,94,0,0" VerticalAlignment="Top" Width="56" FontSize="20" FontFamily="Microsoft YaHei" Click="Copy1_Click"/>
+        <Button x:Name="copy2" Content="复制" HorizontalAlignment="Left" Height="37" Margin="259,138,0,0" VerticalAlignment="Top" Width="56" FontSize="20" FontFamily="Microsoft YaHei" Click="Copy2_Click"/>
+        <Button x:Name="EnterColor" Content="输入浮点颜色" HorizontalAlignment="Left" Height="50" Margin="165,10,0,0" VerticalAlignment="Top" Width="150" Click="EnterColor_Click" FontFamily="Microsoft YaHei" FontSize="24" Foreground="Black" Cursor="Hand"/>
+        <Label Content="保留位数" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="ReservedDigits" HorizontalAlignment="Left" Height="37" Margin="100,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="24" RenderTransformOrigin="1.867,0.613" Text="1"/>
+        <Label Content="浮点数最大值" HorizontalAlignment="Left" Margin="145,180,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="MaxFloatValue" HorizontalAlignment="Left" Height="37" Margin="275,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontSize="24" RenderTransformOrigin="1.867,0.613" Text="1.0"/>
+        <TextBox x:Name="EnterFloatColorBox" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="24" RenderTransformOrigin="1.867,0.613" Visibility="Hidden"/>
+        <Slider x:Name="PercentSlider" HorizontalAlignment="Left" Height="29" Margin="84,65,0,0" VerticalAlignment="Top" Width="170" Value="{Binding ElementName=Percent,Path=Text}" Maximum="100" SmallChange="1"/>
+        <Label Content="不透明度" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" FontSize="16" Height="34"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="291,59,0,0" VerticalAlignment="Top" FontSize="18" Height="34"/>
+        <TextBox x:Name="Percent" HorizontalAlignment="Left" Height="24" Margin="259,65,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="32" FontSize="16" TextChanged="Percent_TextChanged"/>
+
+    </Grid>
+</Window>

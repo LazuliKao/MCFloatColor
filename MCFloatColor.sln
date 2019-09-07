@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCFloatColor", "MCFloatColor\MCFloatColor.csproj", "{FEBAC1E3-0279-4F45-89E5-5216F2869C5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEBAC1E3-0279-4F45-89E5-5216F2869C5C}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBAC1E3-0279-4F45-89E5-5216F2869C5C}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{FEBAC1E3-0279-4F45-89E5-5216F2869C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEBAC1E3-0279-4F45-89E5-5216F2869C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8464DD7D-4448-4585-96BF-6B2B2E39B523}
+	EndGlobalSection
+EndGlobal
