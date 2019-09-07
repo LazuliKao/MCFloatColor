@@ -9,9 +9,9 @@
     <Grid x:Name="background" Margin="0,0,3.333,5.333">
         <Button x:Name="ColorChoose" Content="点击选择颜色" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Click="ColorChoose_Click" FontFamily="Microsoft YaHei" FontSize="24" Foreground="Black" Cursor="Hand"/>
         <TextBox x:Name="ColorBox1" HorizontalAlignment="Left" Height="37" Margin="113,94,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="141" FontSize="20" RenderTransformOrigin="1.867,0.613"/>
-        <Label Content="(R,G,B,A)=" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="rgba_show" Content=" R,G,B,A =" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="Rgba_show_MouseDown"/>
         <TextBox x:Name="ColorBox2" HorizontalAlignment="Left" Height="37" Margin="113,138,0,0" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Width="141" FontSize="20" RenderTransformOrigin="1.867,0.613"/>
-        <Label Content="(R,G,B)=" HorizontalAlignment="Left" Margin="20,138,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="rgb_show" Content=" R,G,B =" HorizontalAlignment="Left" Margin="20,138,0,0" VerticalAlignment="Top" FontSize="20" MouseDown="Rgb_show_MouseDown"/>
         <Button x:Name="copy1" Content="复制" HorizontalAlignment="Left" Height="37" Margin="259,94,0,0" VerticalAlignment="Top" Width="56" FontSize="20" FontFamily="Microsoft YaHei" Click="Copy1_Click"/>
         <Button x:Name="copy2" Content="复制" HorizontalAlignment="Left" Height="37" Margin="259,138,0,0" VerticalAlignment="Top" Width="56" FontSize="20" FontFamily="Microsoft YaHei" Click="Copy2_Click"/>
         <Button x:Name="EnterColor" Content="输入浮点颜色" HorizontalAlignment="Left" Height="50" Margin="165,10,0,0" VerticalAlignment="Top" Width="150" Click="EnterColor_Click" FontFamily="Microsoft YaHei" FontSize="24" Foreground="Black" Cursor="Hand"/>

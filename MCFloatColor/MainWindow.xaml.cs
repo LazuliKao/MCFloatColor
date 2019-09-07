@@ -13,20 +13,39 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace MCFloatColor
 {
+
+
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
     public partial class MainWindow : Window
     {
+        ///// <summary>
+        ///// 更新状态栏的文字，多线程时被委托调用
+        ///// </summary>
+        ///// <param name="text"></param>
+        //private void UpdateColorbox(string text)
+        //{
+        //    ColorBox1.Text = text;
+        //}
+        //private void UpdateStatusWordInThread(string text)
+        //{
+        //    UpdateColorbox d = new UpdateColorbox(UpdateColorbox);
+        //    this.Dispatcher.Invoke(d, text);
+        //}
+
         public MainWindow()
         {
             InitializeComponent();
         }
         public System.Drawing.Color SavedColor;
         public decimal AlphaValue;
+        public int mode_rgba = 0;
+        public int mode_rgb = 0;
 
         private void ColorChoose_Click(object sender, RoutedEventArgs e)
         {
@@ -196,13 +215,64 @@ namespace MCFloatColor
             {
                 if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
             }
-            ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")";
-            ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")";
+            ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3];
+            ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2];
             #endregion
         }
         public static void ColorConvertThread()
         {
-            
+
+        }
+        public static void ChangeModeThread(string text)
+        {
+
+    //        updateStatusStripDelegate d = new updateStatusStripDelegate(updateStatusWordInDelegate)；
+    //this.Dispatcher.Invoke(d, text);
+
+
+        }
+
+
+        private void Rgba_show_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (mode_rgba == 0)
+            {
+                mode_rgba = 1;
+                rgba_show.Content = "(R,G,B,A)=";
+            }
+            else if (mode_rgba == 1)
+            {
+                mode_rgba = 2;
+                rgba_show.Content = "[R,G,B,A]=";
+            }
+            else
+            {
+                mode_rgba = 0;
+                rgba_show.Content = " R,G,B,A =";
+            }
+            //ThreadStart ChangeModeRef = new ThreadStart(ChangeModeThread);
+            //Thread childThread = new Thread(ChangeModeRef);
+            //childThread.Start();
+        }
+
+        private void Rgb_show_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (mode_rgb == 0)
+            {
+                mode_rgb = 1;
+                rgb_show.Content = "(R,G,B)=";
+
+            }
+            else if (mode_rgb == 1)
+            {
+                mode_rgb = 2;
+                rgb_show.Content = "[R,G,B]=";
+            }
+            else
+            {
+                mode_rgb = 0;
+                rgb_show.Content = " R,G,B =";
+            }
         }
     }
 }
