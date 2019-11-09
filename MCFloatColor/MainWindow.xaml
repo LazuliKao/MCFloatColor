@@ -22,8 +22,8 @@
         <TextBox x:Name="EnterFloatColorBox" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="24" RenderTransformOrigin="1.867,0.613" Visibility="Hidden"/>
         <Slider x:Name="PercentSlider" HorizontalAlignment="Left" Height="29" Margin="84,65,0,0" VerticalAlignment="Top" Width="170" Value="{Binding ElementName=Percent,Path=Text}" Maximum="100" SmallChange="1"/>
         <Label Content="不透明度" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" FontSize="16" Height="34"/>
-        <Label Content="%" HorizontalAlignment="Left" Margin="291,59,0,0" VerticalAlignment="Top" FontSize="18" Height="34"/>
-        <TextBox x:Name="Percent" HorizontalAlignment="Left" Height="24" Margin="259,65,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="32" FontSize="16" TextChanged="Percent_TextChanged"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="290,60,0,0" VerticalAlignment="Top" FontSize="18" Height="34"/>
+        <TextBox x:Name="Percent" HorizontalAlignment="Left" Height="24" Margin="259,65,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="35" FontSize="16" TextChanged="Percent_TextChanged"/>
 
     </Grid>
 </Window>

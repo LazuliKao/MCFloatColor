@@ -90,8 +90,18 @@ namespace MCFloatColor
                 {
                     if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
                 }
-                ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")";
-                ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")";
+                switch (mode_rgba)
+                {
+                    case 1: ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")"; break;
+                    case 2: ColorBox1.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + "]"; break; 
+                    case 0: ColorBox1.Text =  CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] ; break; 
+                }
+                switch (mode_rgb)
+                {
+                    case 1: ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2]  + ")"; break;
+                    case 2: ColorBox2.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2]  + "]"; break; 
+                    case 0: ColorBox2.Text =  CRGB[0] + "," + CRGB[1] + "," + CRGB[2]  ; break; 
+                }
                 #endregion
             }
         }
@@ -137,7 +147,9 @@ namespace MCFloatColor
                 if (ARGB != "")
                 {
                     ARGB = ARGB.Replace("(", "");
+                    ARGB = ARGB.Replace("[", "");
                     ARGB = ARGB.Replace(")", "");
+                    ARGB = ARGB.Replace("]", "");
                     string[] StrRgb = ARGB.Split(',');
                     decimal[] DecRgb = new decimal[StrRgb.Length];
                     for (int i = 0; i < StrRgb.Length; i++)
@@ -177,8 +189,18 @@ namespace MCFloatColor
                     {
                         if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
                     }
-                    ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")";
-                    ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")";
+                    switch (mode_rgba)
+                    {
+                        case 1: ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")"; break;
+                        case 2: ColorBox1.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + "]"; break;
+                        case 0: ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3]; break;
+                    }
+                    switch (mode_rgb)
+                    {
+                        case 1: ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")"; break;
+                        case 2: ColorBox2.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "]"; break;
+                        case 0: ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2]; break;
+                    }
                     #endregion
                 }
             }
@@ -215,8 +237,18 @@ namespace MCFloatColor
             {
                 if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
             }
-            ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3];
-            ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2];
+            switch (mode_rgba)
+            {
+                case 1: ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")"; break;
+                case 2: ColorBox1.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + "]"; break;
+                case 0: ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3]; break;
+            }
+            switch (mode_rgb)
+            {
+                case 1: ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")"; break;
+                case 2: ColorBox2.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "]"; break;
+                case 0: ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2]; break;
+            }
             #endregion
         }
         public static void ColorConvertThread()
@@ -226,8 +258,8 @@ namespace MCFloatColor
         public static void ChangeModeThread(string text)
         {
 
-    //        updateStatusStripDelegate d = new updateStatusStripDelegate(updateStatusWordInDelegate)；
-    //this.Dispatcher.Invoke(d, text);
+            //        updateStatusStripDelegate d = new updateStatusStripDelegate(updateStatusWordInDelegate)；
+            //this.Dispatcher.Invoke(d, text);
 
 
         }
@@ -253,6 +285,36 @@ namespace MCFloatColor
             //ThreadStart ChangeModeRef = new ThreadStart(ChangeModeThread);
             //Thread childThread = new Thread(ChangeModeRef);
             //childThread.Start();
+            #region 数据转换+颜色显示
+            System.Drawing.SolidBrush sb = new System.Drawing.SolidBrush(SavedColor);
+            byte[] RGB = { sb.Color.R, sb.Color.G, sb.Color.B };
+            //获取颜色，进行设置
+            #endregion
+            #region 颜色转换-String
+            string[] CRGB = new string[4];
+            for (int i = 0; i < RGB.Length; i++)
+            {
+                CRGB[i] = Convert.ToString(Math.Round(RGB[i] * Convert.ToDecimal(MaxFloatValue.Text) / 255, Convert.ToInt32(ReservedDigits.Text)));
+            }
+            CRGB[3] = Convert.ToString(Math.Round(AlphaValue / 100, Convert.ToInt32(ReservedDigits.Text)));
+            for (int i = 0; i < CRGB.Length; i++)
+            {
+                if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
+            }
+            switch (mode_rgba)
+            {
+                case 1: ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")"; break;
+                case 2: ColorBox1.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + "]"; break;
+                case 0: ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3]; break;
+            }
+            switch (mode_rgb)
+            {
+                case 1: ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")"; break;
+                case 2: ColorBox2.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "]"; break;
+                case 0: ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2]; break;
+            }
+            #endregion
+
         }
 
         private void Rgb_show_MouseDown(object sender, MouseButtonEventArgs e)
@@ -273,6 +335,36 @@ namespace MCFloatColor
                 mode_rgb = 0;
                 rgb_show.Content = " R,G,B =";
             }
+            #region 数据转换+颜色显示
+            System.Drawing.SolidBrush sb = new System.Drawing.SolidBrush(SavedColor);
+            byte[] RGB = { sb.Color.R, sb.Color.G, sb.Color.B };
+            //获取颜色，进行设置
+            #endregion
+            #region 颜色转换-String
+            string[] CRGB = new string[4];
+            for (int i = 0; i < RGB.Length; i++)
+            {
+                CRGB[i] = Convert.ToString(Math.Round(RGB[i] * Convert.ToDecimal(MaxFloatValue.Text) / 255, Convert.ToInt32(ReservedDigits.Text)));
+            }
+            CRGB[3] = Convert.ToString(Math.Round(AlphaValue / 100, Convert.ToInt32(ReservedDigits.Text)));
+            for (int i = 0; i < CRGB.Length; i++)
+            {
+                if (CRGB[i].Length == 1) { CRGB[i] = CRGB[i] + ".0"; }
+            }
+            switch (mode_rgba)
+            {
+                case 1: ColorBox1.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + ")"; break;
+                case 2: ColorBox1.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3] + "]"; break;
+                case 0: ColorBox1.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "," + CRGB[3]; break;
+            }
+            switch (mode_rgb)
+            {
+                case 1: ColorBox2.Text = "(" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + ")"; break;
+                case 2: ColorBox2.Text = "[" + CRGB[0] + "," + CRGB[1] + "," + CRGB[2] + "]"; break;
+                case 0: ColorBox2.Text = CRGB[0] + "," + CRGB[1] + "," + CRGB[2]; break;
+            }
+            #endregion
+
         }
     }
 }
