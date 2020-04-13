@@ -25,6 +25,5 @@ C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MainWindow.bam
 C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.g.resources
 C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.Properties.Resources.resources
 C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.csproj.GenerateResource.cache
-C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.csproj.CoreCompileInputs.cache
 C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.exe
 C:\Users\gaoxi\source\repos\MCFloatColor\MCFloatColor\obj\Release\MCFloatColor.pdb
